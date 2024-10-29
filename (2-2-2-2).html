@@ -1,0 +1,119 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+	此時已經是下午6:00了，你們一起去舊光三越逛街。現在陷入了一個世紀大難題，你的寶貝清照餓了，問你晚餐要吃什麼....
+</h3>
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E6%99%9A%E9%A4%90%E5%90%83%E5%95%A5.png?raw=true"width="450px"height="300px"/>
+</div>
+<div class="box1">
+<h3 class="box2">
+	你該如何回答 ? (有七個選項)
+</h3>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-1).html"align="center">
+	<button class="glow-on-hover">吃春水堂。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-2).html"align="center">
+	<button class="glow-on-hover">吃丸龜製麵。</button>
+</a>
+<h1></h1>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-3).html"align="center">
+	<button class="glow-on-hover">吃勝博殿炸豬排。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-4).html"align="center">
+	<button class="glow-on-hover">吃豆腐村。</button>
+</a>
+<h1></h1>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-5).html"align="center">
+	<button class="glow-on-hover">吃路邊攤。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-6).html"align="center">
+	<button class="glow-on-hover">我也不知道。</button>
+</a>
+<h1></h1>
+<a href="https://evan7777520.github.io/evan/(2-2-2-2-7).html"align="center">
+	<button class="glow-on-hover">你猜猜看我想帶你吃什麼 ~</button>
+</a>
+</body>
+</html>

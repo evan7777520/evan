@@ -1,0 +1,101 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+	你是一個非常喜歡看死亡筆記本的人，於是你開始跟清照一起聊劇情。你非常喜歡L，於是一直說基拉的壞話，希望基拉陣營輸掉。而你女友又又又生氣了，因為她是支持基拉的一方。
+</h3>
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E6%AD%BB%E4%BA%A1%E7%AD%86%E8%A8%98.png?raw=true"width="450px"height="300px"/>
+</div>
+<div class="box1">
+<h3 class="box2">
+	你會怎麼做 ?
+</h3>
+<a href="https://evan7777520.github.io/evan/(2-2-1).html"align="center">
+	<button class="glow-on-hover">堅持自己的立場，沒有必要每件事的看法都和女友一樣。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(2-2-2).html"align="center">
+	<button class="glow-on-hover">改變自己的立場，全力支持基拉。</button>
+</a>
+</body>
+</html>

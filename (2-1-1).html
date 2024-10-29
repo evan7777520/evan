@@ -1,0 +1,95 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+	恭喜你搶過薩諾斯手中的無限寶石，並且彈出響指打贏他了。但是同時你也被無限寶石反噬犧牲了。
+</h3>
+</div>
+<div class="box1">
+<img src="https://raw.githubusercontent.com/evan7777520/evan/refs/heads/main/%E9%8B%BC%E9%90%B5%E4%BA%BA%E9%9F%BF%E6%8C%87.jfif"width="450px"height="300px"/>
+</div>
+<h1></h1>
+<div class="box1">
+<a href="https://evan7777520.github.io/evan/頭.html"align="center">
+	<button class="glow-on-hover">GAME OVER (你死了)</button>
+</body>
+</html>
