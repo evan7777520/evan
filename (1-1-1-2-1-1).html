@@ -1,0 +1,101 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+"誰說你可以拌的阿 !!!!!!! " 清清憤怒地向我喊到。"我是不是說過我不喜歡有拌的咖哩啊 ~ ~蛤 !!!!!!! " 她對我一頓輸出，我不敢支聲，只能默默低頭看著盤中的咖哩飯。
+她的臉上寫滿了憤怒，那雙眼睛似乎能噴出火來。我知道自己犯了一個大錯，但此刻，任何辯解都只會讓情況更加糟糕。我只能默默接受她的指責，心裡卻滿是無奈和內疚。
+"你知道的，我就是不喜歡這樣，為什麼你就是不聽呢 ? " 她的聲音雖然仍帶著怒氣，但我聽得出來其中的失望。這讓我更加難受，因為我明白這並不僅僅是關於咖哩飯，還有我們之間那深藏的問題。
+</h3>
+</div>
+<div class="box1">
+<h3 class="box2">
+那一晚，我們的爭執沒有簡單結束，成了一個心結。幾天後，我的健康急劇惡化，醫生告訴我罹患了罕見且致命的疾病。面對命運的無情，我在病床上握著清清的手，輕聲說 : "對不起，我這次真的無法再陪妳拌咖哩了。"
+清清淚流滿面，痛苦在她的眼中凝結，但不知為何還有一絲絲憤怒。這一盤咖哩飯，成為我們之間無法彌補的裂痕，也成為她永遠的痛。
+<h3>	
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E8%BA%BA%E5%BA%8A.png?raw=true"width="450px"height="300px"/>
+<a href="https://evan7777520.github.io/evan/頭.html"align="center">
+	<button class="glow-on-hover">GAMEOVER</button>
+</a>
+</body>
+</html>

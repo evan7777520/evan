@@ -1,0 +1,104 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+	清清為了保護你跳了出來開始跟警察理論。
+</h3>
+</div>
+<div class="box1">
+<h3 class="box2">
+	場面相當地緊張，直到警察跟清清要身分證的時候才有轉折。警察查著查著發現清清是台中李氏家族的一員，此時我才想起清清的背景不單純，之後我便仗著清清在狐假虎威起來來。
+</h3>
+<div class="box1">
+<img src="C:\Users\kun\Desktop\宇致資料\大學作業\資訊作業圖片\https://raw.githubusercontent.com/evan7777520/evan/refs/heads/main/%E6%AD%A3%E7%BE%A9%E5%9F%B7%E8%A1%8C.jfif"width="450px"height="300px"/>
+</div>
+<h3 class="box2">
+	你會怎麼跟警察說 ?
+</h3>
+<a href="https://evan7777520.github.io/evan/(1-1-1-1-1).html"align="center">
+	<button class="glow-on-hover">你就爛啦。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(1-1-1-1-2).html"align="center">
+	<button class="glow-on-hover">單挑阿 ! </button>
+</a>
+</body>
+</html>

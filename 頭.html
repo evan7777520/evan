@@ -1,0 +1,114 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<h1 align="center">
+	情侶李清照與蔡徐坤的一天
+</h1>
+<div class="box1">
+<h3 class="box2">
+	李清照和蔡徐坤是大學的情侶，今天卻因為咖哩拌不拌吵架了。現在你是蔡徐坤，請你搞定你最愛的寶貝女友。
+</h3>
+</div>
+
+<div class="box1">
+<h3 class="box2">
+	東元5469年6月13日，這天中午是陽光明媚的一天。李清照突然心血來潮，打算煮一碗咖哩飯和你一起吃。當你加進咖哩醬時，正準備把飯和醬拌在一起。此時你最愛的寶貝清照生氣地阻止你，認為這是一件非常噁心的一件事，當咖哩拌下去時，它已經不是咖哩飯了，而是廚餘。
+</h3>
+</div>
+
+<div class="box1">
+<img src="https://raw.githubusercontent.com/evan7777520/evan/refs/heads/main/e59296e593a91-1.webp"width="450px"height="300px"/>
+</div>
+<div class="box1">
+<h3 class="box2">
+	身為最佳男友的你，你決定拌還是不拌?
+</h3>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/images.jpg?raw=true"width="450px"height="300px"/>
+</div>
+<a href="https://evan7777520.github.io/evan/(1).html"align="center">
+	<button class="glow-on-hover">不拌</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(2).html"align="center">
+	<button class="glow-on-hover">拌</button>
+</a>
+</body>
+</html>

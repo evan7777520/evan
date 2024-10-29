@@ -1,0 +1,100 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+好嘛 ! 你先吃。我欣慰的說到。那我要開動了 ! 清清回說。 
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E6%9D%8E%E6%B8%85%E7%85%A7%E5%90%83%E9%A3%AF.jpg?raw=true"width="450px"height="300px"/>
+<div class="box1">
+<h3 class="box2">
+欸不是，你怎麼把吃完了...。阿就很香啊...。清清回說。
+<h3>	
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E5%92%96%E5%93%A9%E7%A9%BA%E7%9B%A4.jpg?raw=true"width="450px"height="300px"/>
+<h3></h3>
+<a href="https://evan7777520.github.io/evan/頭.html"align="center">
+	<button class="glow-on-hover">Not bad end (咖哩被女友吃完了)</button>
+</a>
+</body>
+</html>

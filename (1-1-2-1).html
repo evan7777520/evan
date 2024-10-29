@@ -1,0 +1,102 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+正準備給她一個大大的擁抱時，她突然把我推開。我一臉茫然地站在那，並聽到清清說 : 果然你還是不愛我，抱我的時候怎麼那麼沒有溫度。我回說 : 不是ㄟ現在是冬天凌晨三點餒 ! 清清說 : 我不管你就是不愛我 ! 你既然不愛我那你也別想被愛 ! 我要殺了你 ~ ~ ~
+</div>	
+<div class="box1">
+<h3 class="box2">
+之後清清不知道為什麼從背後掏出十八代鬼扯，對我使出 「C8763」 。
+<h3>	
+</div>
+<div class="box1">
+<img src="https://github.com/evan7777520/evan/blob/main/%E6%9D%8E%E6%B8%85%E7%85%A7%E7%A0%8D%E4%BA%BA.png?raw=true"width="450px"height="300px"/>
+<div class="box1">
+<h3 class="box2">
+我變成肉塊跟下地過著沒羞沒灶的生活。
+</h3>	
+</div>
+<a href="https://evan7777520.github.io/evan/頭.html"align="center">
+	<button class="glow-on-hover">GAMEOVER (你死了)</button>
+</a>
+</body>
+</html>

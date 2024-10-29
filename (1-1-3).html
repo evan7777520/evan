@@ -1,0 +1,105 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box1{
+			margin: auto;
+			width: 450px;
+			border:none;
+		}
+		.box2{
+			width: 100%;
+			border: 3px black solid;
+			border-radius: 10px;
+			box-sizing: border-box;
+			padding: 8px;
+		}
+  		.glow-on-hover {
+      	width: 220px;
+    	height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	background: #111;
+    	cursor: pointer;
+    	position: relative;
+    	z-index: 0;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:before {
+    	content: '';
+    	background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    	position: absolute;
+    	top: -2px;
+    	left:-2px;
+    	background-size: 400%;
+    	z-index: -1;
+    	filter: blur(5px);
+    	width: calc(100% + 4px);
+    	height: calc(100% + 4px);
+    	animation: glowing 20s linear infinite;
+    	opacity: 0;
+    	transition: opacity .3s ease-in-out;
+    	border-radius: 10px;
+		}
+
+		.glow-on-hover:active {
+    	color: #000
+		}
+
+		.glow-on-hover:active:after {
+    	background: transparent;
+		}
+
+		.glow-on-hover:hover:before {
+    	opacity: 1;
+		}
+
+		.glow-on-hover:after {
+    	z-index: -1;
+   		content: '';
+   	 	position: absolute;
+    	width: 100%;
+   	 	height: 100%;
+    	background: #111;
+    	left: 0;
+    	top: 0;
+    	border-radius: 10px;
+		}
+
+		@keyframes glowing {
+    	0% { background-position: 0 0; }
+   		50% { background-position: 400% 0; }
+    	100% { background-position: 0 0; }
+		}
+	</style>
+</head>
+<body>
+<div class="box1">
+<h3 class="box2">
+清清突然大哭了起來，為了安慰她我只好扛著她去買蛋糕。
+</div>
+<div class="box1">
+<h3 class="box2">
+到了蛋糕店，清清終於消停了。我們便坐下來開始點餐，突然她開始邊哭邊拍我說 : 坤坤這裡我最喜愛的蛋糕賣完了。
+</div>	
+<div class="box1">
+<h3 class="box2">
+為了安撫清清的情緒你會怎麼解決 ?
+<h3></h3>
+<a href="https://evan7777520.github.io/evan/(1-1-3-1).html"align="center">
+	<button class="glow-on-hover">化身中華一番小當家衝進廚房開做。</button>
+</a>
+<a href="https://evan7777520.github.io/evan/(1-1-3-2).html"align="center">
+	<button class="glow-on-hover">媽的女人不理他自顧自的開始點餐。</button>
+</a>
+<h3></h3>
+<a href="https://evan7777520.github.io/evan/(1-1-3-3).html"align="center">
+	<button class="glow-on-hover">嘗試點其他蛋糕。</button>
+</a>
+</body>
+</html>
