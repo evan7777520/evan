@@ -1,0 +1,21 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="chart_div"></div>
+<script>
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart(){
+}
+function drawChart() {
+var data = new google.visualization.arrayToDataTable([
+	['卡片名稱', '使用次數'],
+	['銀髮天使‧艾蜜莉雅', 16], ['萬魔之王‧咖波', 14], ['諸神的黃昏‧奧丁、第七王子‧洛伊德、凜潔心界‧ 曼陀羅', 8], ['碑紋騎士‧ 咖波', 7], ['永遠的契約‧ZERO與C.C.', 5],
+]);
+var options = {
+	title: '神魔之塔咖波合作地獄級黑貓蟲與黑貓蟲寶寶出場隊員TOP5',
+	hAxis: { title: '卡片名稱'},
+	vAxis: {title: '使用次數'}
+};
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
+</script>
