@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    var obj = document.createElement("audio");
+    obj.src = "https://harley878.github.io/114-1-2/ppp.ogg";
+    obj.volume = 1;
+    obj.autoPlay = false;
+    var obk = document.createElement("audio");
+    obk.src = "https://harley878.github.io/114-1-2/BBB.ogg";
+    obk.volume = 1;
+    obk.autoPlay = false;
+    $("input").keydown(function(){
+        $(this).css("background-color", "white");
+    });
+    $("input").keyup(function(){
+        $(this).css("background-color", "white");
+    });
+    $("button").click(function(){
+        let answer=document.getElementById("S").value;
+        a = answer;
+        console.log(a)
+        for(variable=1;variable<=a;variable=variable+1){
+            let elem = document.createElement("p");
+            elem.setAttribute("class","G");
+            let ran=Math.random();
+            console.log(ran)
+            if (ran<0.95){
+                elem.innerHTML= "啵";
+            }
+            else{
+                elem.innerHTML= "蹦";
+                $(elem).addClass("B")
+            }
+            document.body.appendChild(elem);
+        }
+
+        $("p").on("click", function(event){
+            console.log(event);
+            $(this).css("background-color","white");
+            $(this).addClass("T");
+            if ($(this).hasClass("B")){
+                obk.play();
+            }
+            else{
+                obj.play();
+            }
+            if ($(this).hasClass("B")){
+                setTimeout(function(){
+                    window.location.href = "https://harley878.github.io/114-1-2/bang2.html"},1700); 
+            }
+            
+        });
+    $("p").on("mouseenter",function(event){
+        if ($(this).hasClass("T")){
+            $(this).css("background-color","white");
+        }
+        else{
+            $(this).css("background-color","grey");
+            $(this).css("color","grey");
+        }
+
+    });
+    $("p").on("mouseleave",function(event){
+        if ($(this).hasClass("T")){
+            $(this).css("background-color","white");
+        }
+        else{
+            $(this).css("background-color","black");
+            $(this).css("color","black");
+        }
+    });
+    });
+
+
+});
+
+</script>
+<style>
+    *{margin: 0px; box-sizing: border-box;}
+    div{
+        padding: 5px;
+    }
+    p{
+        float:left;
+        width: max-content;
+        background-color: black;
+        font-size: 90px;
+        display: inline;
+    }
+</style>
+<body>
+    <div>
+    你要增加多少列的啵: <input type="text" id="S">
+    <button type="button">click</button>
+    </div>
+</body>
+</head>
+</html>
